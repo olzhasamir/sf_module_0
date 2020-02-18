@@ -11,18 +11,17 @@ def score_game(game):
     print(f"Ваш алгоритм угадывает число в среднем за {score} попыток")
     return(score)
     def game333(number):
-    print(number)
-    count = 0
-    predict = np.random.randint(1,100)
-    max_value = 100
-    min_value = 1
-    while number != predict:
-        count+=1
-        if predict > number: 
-            max_value = predict
-        else: 
-            min_value = predict
-        predict = min_value + int((max_value - min_value)/2)
-        print(count, predict)
+        count = 0
+        predict = np.random.randint(1,100)
+        max_value = 100
+        min_value = 1
+        while number != predict:
+            count+=1
+            if predict > number: 
+                max_value = predict
+            else: 
+                min_value = predict
+            predict = min_value + int((max_value - min_value)/2)
+            print(count, predict)
     return(count) 
-    score_game(game333)
+score_game(game333)
